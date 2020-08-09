@@ -1,0 +1,52 @@
+html {
+    font-size: 10px;
+    background: url(https://img.wallpapersafari.com/desktop/1920/1080/35/52/m0GVKB.jpg) bottom center;
+    background-size: cover;
+  }
+
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+kbd {
+    display: block;
+    font-size: 4rem;
+  }
+.keys {
+    display: flex;
+    flex: 2;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+.key {
+    border: 5px double rgb(1, 12, 5);
+    border-radius: 50px;
+    margin: 5rem;
+    font-size: 2rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center; 
+    color:rgb(248, 135, 5);
+    background:  rgb(2, 3, 2);
+    text-shadow: 0 0 .5rem black;
+  }
+
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: rgb(248, 135, 5);
+  }
+
+.playing {
+    transform: scale(1.1);
+    border-color: #1900ff;
+    box-shadow: 5px 0 1rem .5rem #1900ff;     
+  }
