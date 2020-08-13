@@ -25,6 +25,20 @@
     /*
       misc styles, nothing to do with CSS variables
     */
+    :root{
+        --base:red;
+        --spacing:10px;
+        --blur:10px
+    }
+    img{
+        padding:var(--spacing);
+        background:var(--base);
+        filter:blur(var(--blur))
+    }
+
+    .hl{
+        color:var(--base);
+    }
 
     body {
       text-align: center;
@@ -45,6 +59,15 @@
   </style>
 
   <script>
+      const input= document.querySelectorAll('.controls input');
+
+      function updateValue(){
+          const suffix = this.dataset.sizing || '';  // dataset sizing taken as px here cause min & max doesnt give px at end
+          document.documentElement.style.setProperty(`--${this.name}`,this.value+suffix); // on each mouse hover, event will be triggered but value is not changing hence the DOM stays same
+      }
+
+      input.forEach(a=>a.addEventListener('change',updateValue)); // adding event for change in value
+      input.forEach(a=>a.addEventListener('mousemove',updateValue)) // adding event for mouse move 
   </script>
 
 </body>
