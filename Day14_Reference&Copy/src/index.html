@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+</head>
+<body>
+
+  <script>
+    // start with strings, numbers and booleans, they are not referenced
+
+    // Let's say we have an array, they and objects are referenced
+    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+
+
+    // It just does First Level Copy, not suitable for deep copy
+
+    const players1 = players.slice();
+
+    const players2 = [].concat(players);
+
+    const players3 = [...players];
+
+    const players4 = Araay.from(players);
+
+
+    // with Objects
+    const person = {
+      name: 'Wes Bos',
+      age: 80
+    };
+
+    const person1 = Object.assign({},person); // create shallow copy of level one to the new object
+    //Poor man's copy, check some libraries rather
+    const person2 =JSON.parse(JSON.stringify(person)) // Stringify will make it string first, parse will make it back to Json object
+  </script>
+
+</body>
+</html>
